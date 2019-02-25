@@ -87,38 +87,6 @@ $(document).ready(function(){
 		cssEase: 'linear'
 	});
 });
-
-//@Google Map API
-var myCenter=new google.maps.LatLng(22.893194,121.248083);
-
-function initialize()
-{
-var mapProp = {
-  center:myCenter,
-  zoom:15,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker=new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-
-var infowindow = new google.maps.InfoWindow({
-  content:"興昌天主堂<br />GPS Location<br />22.893194, 121.248083"
-  });
-
-google.maps.event.addListener(marker, 'click', function() {
-  infowindow.open(map,marker);
-  });
-
-infowindow.open(map,marker);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 </head>
 <body>
@@ -194,7 +162,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<div class="content">
 		<h2>旅遊資訊</h2>
 		<h3>INFORMATION</h3>
-		<div id="googleMap"></div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7350.94315856313!2d121.24676094877101!3d22.895970716118853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fa2645480e0f3%3A0x897d311f4829711a!2z5aSp5Li75pWZ6IiI5piM6IGW6Iul55Gf5aCC!5e0!3m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 </div>
 <!-- <div class="layout1">
